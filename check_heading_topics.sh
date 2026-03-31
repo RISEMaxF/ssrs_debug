@@ -1,6 +1,6 @@
 #!/bin/bash
 # Show all heading topics being published on Zenoh
-python3 -c "
+docker run --rm --network host ghcr.io/rise-maritime/keelson-connector-blueos:v0.2.0 python3 -c "
 import zenoh
 s = zenoh.open(zenoh.Config())
 def cb(sample):
